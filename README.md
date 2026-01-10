@@ -1,3 +1,4 @@
+## Note
 - src/components/Project.astro
   - Mengerjakan seluruh proyek terlebih dahulu di Project.astro 
 
@@ -39,3 +40,9 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+## Installation and setup scss
+1. Run in terminal 'npm install sass'
+2. Create styles.scss in src/styles
+3. Import to Layout.astro "import '../styles/styles.scss'"
