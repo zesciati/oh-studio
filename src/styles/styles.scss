@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 $white: oklch(1 0 0);
 $grey: oklch(0.5965 0 0);
 $black: oklch(0 0 0);
 $light-grey: oklch(0.924 0.0035 39.48 / 50.2%);
+$Inter: "Inter", sans-serif;
 
 // spacing
 $space-3xs: clamp(0.25rem, 0.228rem + 0.0939vw, 0.3125rem);
@@ -14,7 +17,7 @@ $space-xl: clamp(2.625rem, 2.2289rem + 1.6901vw, 3.75rem);
 $space-2xl: clamp(3.5rem, 2.9718rem + 2.2535vw, 5rem);
 $space-3xl: clamp(5.25rem, 4.4577rem + 3.3803vw, 7.5rem);
 
-  /* One-up pairs */
+/* One-up pairs */
 $space-3xs-2xs: clamp(0.25rem, 0.118rem + 0.5634vw, 0.625rem);
 $space-2xs-xs: clamp(0.4375rem, 0.2614rem + 0.7512vw, 0.9375rem);
 $space-xs-s: clamp(0.6875rem, 0.4894rem + 0.8451vw, 1.25rem);
@@ -24,7 +27,7 @@ $space-l-xl: clamp(1.75rem, 1.0458rem + 3.0047vw, 3.75rem);
 $space-xl-2xl: clamp(2.625rem, 1.7887rem + 3.5681vw, 5rem);
 $space-2xl-3xl: clamp(3.5rem, 2.0915rem + 6.0094vw, 7.5rem);
 
-  /* Custom pairs */
+/* Custom pairs */
 $space-s-l: clamp(0.875rem, 0.3028rem + 2.4413vw, 2.5rem);
 
 // typing fonts 14-20px
@@ -39,7 +42,7 @@ $step-5: clamp(2.1773rem, 1.6007rem + 2.46vw, 3.8147rem);
 
 $navbar-screen: 450px;
 
-@mixin flexBasic($content, $align){
+@mixin flexBasic($content, $align) {
   display: flex;
   justify-content: $content;
   align-items: $align;
@@ -48,13 +51,23 @@ $navbar-screen: 450px;
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
 
+body{
+  font-family: $Inter;
+}
 
+main{
+  padding: $space-xs;
+}
+
+// Navbar
 .sidenav {
   height: 100%;
   width: 0;
@@ -66,33 +79,50 @@ html {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  text-align:center;
+  text-align: center;
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    &:hover {
+      color: #f1f1f1;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-
-}
-
-.sidenav a:hover{
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+header{
+  margin-top: 3rem;
+  .title{
+    font-size: $step-4;
+    padding-inline: $space-l-xl;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 1.4rem;
+  }
+  .tagg{
+    @include flexBasic(space-evenly, none)
+  }
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
+
+// Header
 
