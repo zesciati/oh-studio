@@ -101,6 +101,7 @@ main{
   }
 }
 
+// header
 header{
   margin-top: 3rem;
   .title{
@@ -111,9 +112,29 @@ header{
     padding-bottom: 1.4rem;
   }
   .tagg{
-    @include flexBasic(space-evenly, none)
+    @include flexBasic(space-evenly, none);
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(20px, 600px));
+    p{
+      background-color: $light-grey;
+      padding: 2px;
+      padding-inline: 5px;
+      border-radius: 15px;
+    }
   }
 }
+
+// Gallery
+.gallery{
+  margin-top: 5rem;
+  img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+}
+
+
 
 @media screen and (max-height: 450px) {
   .sidenav {
