@@ -1,6 +1,7 @@
 ## Note
 - src/components/Project.astro
   - Mengerjakan seluruh proyek terlebih dahulu di Project.astro 
+- Semua interaktivitas js pada masing2 section terdapat di file terkait
 
 ## 🚀 Project Structure
 
@@ -46,3 +47,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 1. Run in terminal 'npm install sass'
 2. Create styles.scss in src/styles
 3. Import to Layout.astro "import '../styles/styles.scss'"
+
+# what do I learn
+- is:inline on script tag is forcing astro to send JS to browser

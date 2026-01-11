@@ -1,0 +1,37 @@
+---
+
+---
+
+<nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn"  data-close>&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <span style="font-size:30px;cursor:pointer"  data-open >&#9776; open</span>
+</nav>
+
+<script is:inline>
+  const sideNav = document.getElementById("mySidenav");
+  function openNav() {
+    if (!sideNav) return;
+
+    sideNav.style.width = "100%";
+  }
+
+  function closeNav() {
+    if (!sideNav) return;
+
+    sideNav.style.width = "0";
+  }
+
+  document.querySelector("[data-open]")?.addEventListener("click", openNav);
+
+  document.querySelector("[data-close]")?.addEventListener("click", closeNav);
+</script>
+
+<!-- 
+- menghapus onclick
+-->

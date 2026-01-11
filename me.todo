@@ -2,3 +2,6 @@
 ✔ setting up astro untuk muncul di src/pages/index.astro @done(26-01-11 00:05)
 ✔ initiate git @done(26-01-11 00:40)
 ✔ dokumentasi penginstalan dan setting scss di astro @done(26-01-11 00:43)
+mobile:
+  ✔ sidenav mobile - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav_full @done(26-01-11 15:04)
+  
