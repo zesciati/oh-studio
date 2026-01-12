@@ -6,6 +6,11 @@ $black: oklch(0 0 0);
 $light-grey: oklch(0.924 0.0035 39.48 / 50.2%);
 $Inter: "Inter", sans-serif;
 
+// Responsive Design
+$tablet: 768px;
+$desktop:1024px;
+$desktop-1440:1440px;
+
 // spacing
 $space-3xs: clamp(0.25rem, 0.228rem + 0.0939vw, 0.3125rem);
 $space-2xs: clamp(0.4375rem, 0.3715rem + 0.2817vw, 0.625rem);
@@ -137,7 +142,7 @@ header{
 // Get in touch
 .getintouch{
   text-align: center;
-  margin-top: 2rem;
+  margin-block: 2rem;
   font-size: $step-2;
   p{
     font-weight: 500;
@@ -167,5 +172,18 @@ footer{
   }
 }
 
-// Header
-
+@media (min-width: $tablet) and (orientation: landscape) {
+  
+  // Gallery
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 12px;
+    padding-inline: 4rem;
+    img{
+      // width: 100%;
+      min-height: 100%;
+    }
+  }
+  
+}

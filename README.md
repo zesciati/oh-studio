@@ -41,10 +41,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
 
 ## Installation and setup scss
 1. Run in terminal 'npm install sass'
@@ -53,3 +49,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # what do I learn
 - is:inline on script tag is forcing astro to send JS to browser
+- https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488 - responsive design
