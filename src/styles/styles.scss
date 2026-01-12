@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 $white: oklch(1 0 0);
 $grey: oklch(0.5965 0 0);
@@ -8,8 +8,8 @@ $Inter: "Inter", sans-serif;
 
 // Responsive Design
 $tablet: 768px;
-$desktop:1024px;
-$desktop-1440:1440px;
+$desktop: 1024px;
+$desktop-1440: 1440px;
 
 // spacing
 $space-3xs: clamp(0.25rem, 0.228rem + 0.0939vw, 0.3125rem);
@@ -64,11 +64,11 @@ html {
   margin: 0;
 }
 
-body{
+body {
   font-family: $Inter;
 }
 
-main{
+main {
   padding: $space-xs;
 }
 
@@ -107,20 +107,20 @@ main{
 }
 
 // header
-header{
+header {
   margin-top: 3rem;
-  .title{
+  .title {
     font-size: $step-4;
     padding-inline: $space-l-xl;
     text-align: center;
     font-weight: 600;
     padding-bottom: 1.4rem;
   }
-  .tagg{
+  .tagg {
     @include flexBasic(space-evenly, none);
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(20px, 600px));
-    p{
+    p {
       background-color: $light-grey;
       padding: 2px;
       padding-inline: 5px;
@@ -130,9 +130,9 @@ header{
 }
 
 // Gallery
-.gallery{
+.gallery {
   margin-top: 5rem;
-  img{
+  img {
     width: 100%;
     max-width: 100%;
     border-radius: 5px;
@@ -140,28 +140,28 @@ header{
 }
 
 // Get in touch
-.getintouch{
+.getintouch {
   text-align: center;
   margin-block: 2rem;
   font-size: $step-2;
-  p{
+  p {
     font-weight: 500;
   }
-  .get{
+  .get {
     color: $grey;
   }
 }
 
-footer{
-  .trademark{
+// footer
+.footer-content {
+  .trademark {
     text-align: center;
-    margin-bottom: .54rem;
+    margin-bottom: 0.54rem;
   }
-  .social-media{
+  .social-media {
     @include flexBasic(space-evenly, none);
   }
 }
-
 
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -173,17 +173,51 @@ footer{
 }
 
 @media (min-width: $tablet) and (orientation: landscape) {
-  
+  header {
+    .title {
+      padding-inline: 5rem;
+      font-size: $step-5;
+    }
+    .tagg {
+      @include flexBasic(center, none);
+      column-gap: 20px;
+    }
+  }
+
   // Gallery
-  .gallery{
+  .gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 12px;
-    padding-inline: 4rem;
-    img{
+    padding-inline: 1rem;
+    img {
       // width: 100%;
       min-height: 100%;
     }
   }
-  
+
+  .getintouch {
+    margin-top: 8rem;
+    font-size: $step-3;
+  }
+
+  .footer-content {
+    margin-top: 5rem;
+    @include flexBasic(space-between, none);
+    .trademark {
+      margin-bottom: 0;
+    }
+    .social-media {
+      @include flexBasic(none, flex-end);
+      column-gap: 12px;
+    }
+  }
+}
+
+@media (min-width: $desktop) and (orientation: landscape) {
+  header {
+    .title {
+      padding-inline: 15rem;
+    }
+  }
 }
