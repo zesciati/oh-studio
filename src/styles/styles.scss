@@ -173,6 +173,41 @@ header {
 }
 
 @media (min-width: $tablet) and (orientation: landscape) {
+  nav {
+    .sidenav {
+      position: static; // hilangkan overlay
+      width: auto; // tidak 0 lagi
+      height: auto;
+      padding-top: 0;
+      background-color: transparent;
+      overflow: visible;
+      transition: none; // MATIKAN efek animasi
+      text-align: center;
+      @include flexBasic(center, none);
+      .closebtn {
+        display: none; // tombol close tidak perlu
+      }
+      .link-nav {
+        background-color: $light-grey;
+        padding: $space-2xs;
+        border-radius: 15px;
+        a {
+          background-color: $white;
+          border-radius: 15px;
+          padding-inline: 12rem;
+          display: inline-block; // menu jadi normal
+          font-size: $step-0;
+          padding: 0 16px;
+          color: inherit;
+        }
+      }
+    }
+
+    .open {
+      display: none;
+    }
+  }
+
   header {
     .title {
       padding-inline: 5rem;
