@@ -93,7 +93,7 @@ main {
     display: block;
     transition: 0.3s;
     &:hover {
-      color: #f1f1f1;
+      background-color: #f1f1f1;
     }
   }
 
@@ -122,7 +122,8 @@ header {
     // grid-template-columns: repeat(auto-fit, minmax(20px, 600px));
     p {
       background-color: $light-grey;
-      padding: 2px;
+      padding: 5px;
+      font-size: $step--1;
       padding-inline: 5px;
       border-radius: 15px;
     }
@@ -183,6 +184,7 @@ header {
       overflow: visible;
       transition: none; // MATIKAN efek animasi
       text-align: center;
+      margin-top: 1rem;
       @include flexBasic(center, none);
       .closebtn {
         display: none; // tombol close tidak perlu
@@ -190,15 +192,22 @@ header {
       .link-nav {
         background-color: $light-grey;
         padding: $space-2xs;
-        border-radius: 15px;
+        border-radius: 30px;
+        @include flexBasic(none, none);
+        column-gap: 12px;
         a {
-          background-color: $white;
-          border-radius: 15px;
-          padding-inline: 12rem;
-          display: inline-block; // menu jadi normal
+          // background-color: $white;
+          border-radius: 30px;
+          // padding-inline: 12rem;
+          // display: inline-block; // menu jadi normal
           font-size: $step-0;
-          padding: 0 16px;
+          // padding: 0 16px;
+          padding-inline: $space-xs;
+          padding-block: $space-2xs;
           color: inherit;
+          &:hover {
+            background-color: $white;
+          }
         }
       }
     }
@@ -209,6 +218,7 @@ header {
   }
 
   header {
+    margin-top: 6rem;
     .title {
       padding-inline: 5rem;
       font-size: $step-5;
@@ -216,6 +226,10 @@ header {
     .tagg {
       @include flexBasic(center, none);
       column-gap: 20px;
+      p {
+        padding: 6px;
+        // font-size: $step--1;
+      }
     }
   }
 

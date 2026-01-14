@@ -1,18 +1,39 @@
 ---
 
-
 ---
 
-
 <section>
-
-  <div class="gallery">
-    <img src="/images/pexels-adempercem.webp" alt="stair-backgroundblue">
-    <img src="/images/pexels-alscre.webp" alt="gamer">
-    <img src="/images/pexels-bubi.webp" alt="sky-diving">
-    <img src="/images/pexels-lekepov.webp" alt="photo-with-each-other">
-    <img src="/images/pexels-pixabay-parkour.webp" alt="parkour-man">
-    <img src="/images/pexels-pixabay.webp" alt="jumping-biker">
+  <div class="section gallery fadeup">
+    <img src="/images/pexels-adempercem.webp" alt="stair-backgroundblue" />
+    <img src="/images/pexels-alscre.webp" alt="gamer" />
+    <img src="/images/pexels-bubi.webp" alt="sky-diving" />
+    <img src="/images/pexels-lekepov.webp" alt="photo-with-each-other" />
+    <img src="/images/pexels-pixabay-parkour.webp" alt="parkour-man" />
+    <img src="/images/pexels-pixabay.webp" alt="jumping-biker" />
   </div>
-
 </section>
+
+<script is:inline>
+  const observerOptions = {
+    root: null,
+    threshold: 0,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const sections = Array.from(document.getElementsByClassName("section"));
+
+    for (let section of sections) {
+      observer.observe(section);
+    }
+  });
+</script>

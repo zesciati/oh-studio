@@ -10,7 +10,12 @@ mobile:
   ✔ GetInTouch content @done(26-01-12 17:44)
   ✔ footer @done(26-01-12 18:14)
 Desktop:
-  ☐ Mengubah Navbar 
+  ✔ Mengubah Navbar @done(26-01-13 02:08)
+    ☐ desain 
+    ☐ animation  
   ✔ Mengubah header tag @done(26-01-12 23:03)
   ✔ Mengubah Gallery @done(26-01-12 20:33)
+    ☐ Gambar sendiri
+    ☐ animation scroll gallery
+    ☐ animation zooming gallery
   ✔ Mengubah Footer @done(26-01-12 23:03)
